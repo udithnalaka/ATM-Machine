@@ -26,7 +26,23 @@
 			<tr>
 				<td><form:label path="cust_pin">enter PIN number:</form:label></td>
 				<td><form:input path="cust_pin"></form:input></td>
-			</tr>			
+			</tr>	
+			<tr>
+				<td><form:label path="address.addressLine1"> Address Street:</form:label></td>
+				<td><form:input path="address.addressLine1"></form:input></td>
+			</tr>
+			<tr>
+				<td><form:label path="address.suburb">Suburb:</form:label></td>
+				<td><form:input path="address.suburb"></form:input></td>
+			</tr>
+			<tr>
+				<td><form:label path="address.postcode">Postcode:</form:label></td>
+				<td><form:input path="address.postcode"></form:input></td>
+			</tr>
+			<tr>
+				<td><form:label path="address.state">State:</form:label></td>
+				<td><form:input path="address.state"></form:input></td>
+			</tr>		
 			<tr>
 				<td><input value="Add Customer" type="submit"></td>
 				<td></td>

@@ -5,11 +5,13 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -37,12 +39,19 @@ public class Customer implements Serializable {
 	@Column(name="cust_active")
 	private Boolean cust_active;	
 	
-	//private List<Address> custAddressList;
-	//private Set<Account> custAccounts;
-		
+	@OneToOne(mappedBy="customer", cascade=CascadeType.ALL)
+	private Address address;
 	
+	//private Set<Account> custAccounts;
+			
 	public Integer getId() {
 		return id;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	public void setId(Integer id) {
 		this.id = id;
@@ -78,18 +87,7 @@ public class Customer implements Serializable {
 		this.cust_active = cust_active;
 	}
 	
-	/*public List<Address> getCustAddressList() {
-		return custAddressList;
-	}
-	public void setCustAddressList(List<Address> custAddressList) {
-		this.custAddressList = custAddressList;
-	}
-	public Set<Account> getCustAccounts() {
-		return custAccounts;
-	}
-	public void setCustAccounts(Set<Account> custAccounts) {
-		this.custAccounts = custAccounts;
-	}*/
+	
 	
 	
 	
