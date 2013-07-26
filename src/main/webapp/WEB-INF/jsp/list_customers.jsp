@@ -8,7 +8,7 @@
 <title>ATM Machine</title>
 </head>
 <body>
-	<h2>Customer List</h2>
+	<h2>ATM Customer List</h2>
 	<br><br>
 	<p><a href="${pageContext.request.contextPath}/index.htm">Home page</a></p>
 	<br><br>
